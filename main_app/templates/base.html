@@ -8,8 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="" />
-    <title>Cat Collector</title>
+    <title>Birds Collector</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+
+    <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'images/splash.svg' %}"
+  />
+  
 
     {% block head %} 
     {% endblock %}
@@ -18,7 +25,8 @@
     <header>
       <div class="header-logo-container">
         <a href="/">
-          <img src="" alt="The Cat Collector Logo" />
+            <img src="{% static 'images/header-logo.svg' %}" alt="The bird Collector Logo" />
+
         </a>
       </div>
       <nav>
