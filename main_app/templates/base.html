@@ -31,10 +31,10 @@
       </div>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>  
-          <li><a href="/birds">All Birds</a></li>
-          <li><a href="/about">About</a></li>
-          
+            <li><a href="/">Home</a></li>  
+            <li><a href="{% url 'bird-index' %}">All Birds</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            
         </ul>
       </nav>
     </header>
