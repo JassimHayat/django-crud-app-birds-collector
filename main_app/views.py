@@ -1,10 +1,11 @@
 # main_app/views.py
 
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Bird
 
 # class Bird:
-#     def __init__(self, name,breed, description, age):
+#     def __init__(self, name, breed, description, age):
 #         self.name = name
 #         self.breed = breed
 #         self.description = description
@@ -18,8 +19,16 @@ from .models import Bird
 #     Bird('Black Falcon','baby Black Falcon' , 'Sneaky screecher.', 6),
 # ]
 
+# main-app/views.py
+
+class BirdCreate(CreateView):
+    model = Bird
+    fields = ['name', 'breed', 'description', 'age']
+
+
 def home(request):
     return render(request, 'home.html')
+
 
 def about(request):
           return render(request, 'about.html')
