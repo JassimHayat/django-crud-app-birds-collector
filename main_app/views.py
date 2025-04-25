@@ -1,7 +1,7 @@
 # main_app/views.py
 
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView,UpdateView, DeleteView
 from .models import Bird
 
 # class Bird:
@@ -23,7 +23,18 @@ from .models import Bird
 
 class BirdCreate(CreateView):
     model = Bird
-    fields = ['name', 'breed', 'description', 'age']
+    fields = '__all__'
+
+
+class BirdUpdate(UpdateView):
+    model = Bird
+    # Let's disallow the renaming of a cat by excluding the name field!
+    fields = ['breed', 'description', 'age']
+
+class BirdDelete(DeleteView):
+    model = Bird
+    success_url = '/birds/'
+
 
 
 def home(request):
