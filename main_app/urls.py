@@ -25,7 +25,9 @@ urlpatterns = [
     path('birds/create/', views.BirdCreate.as_view(), name='bird-create'),
     path('birds/<int:pk>/update/', views.BirdUpdate.as_view(), name='bird-update'),
     path('birds/<int:pk>/delete/', views.BirdDelete.as_view(), name='bird-delete'),
-    path('cats/<int:cat_id>/add-feeding/', views.add_feeding,name='add-feeding'),
+    path('cats/<int:bird_id>/add-feeding/', views.add_feeding,name='add-feeding'),
+
+    
 
 ]
 
